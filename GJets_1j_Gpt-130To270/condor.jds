@@ -1,0 +1,10 @@
+executable = skeleton_condor.sh
+getenv = True
+when_to_transfer_output = on_exit
++JobFlavour = "testmatch"
++JobBatchName = "[datasetname]"
+output = [datasetname].stdout
+error = [datasetname].stderr
+log = [datasetname].stdlog
++SingularityImage = "/cvmfs/singularity.opensciencegrid.org/cmssw/cms:rhel8-m-m20230425"
+queue

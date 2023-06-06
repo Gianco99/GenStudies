@@ -1,0 +1,10 @@
+executable = skeleton_condor.sh
+getenv = True
+when_to_transfer_output = on_exit
++JobFlavour = "testmatch"
++JobBatchName = "GJets_1j_Gpt-130To270_479192"
+output = GJets_1j_Gpt-130To270_479192.stdout
+error = GJets_1j_Gpt-130To270_479192.stderr
+log = GJets_1j_Gpt-130To270_479192.stdlog
++SingularityImage = "/cvmfs/singularity.opensciencegrid.org/cmssw/cms:rhel8-m-m20230425"
+queue
