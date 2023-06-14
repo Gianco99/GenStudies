@@ -7,7 +7,7 @@ cd CMSSW_12_4_11_patch3/src
 eval `scram runtime -sh`
 
 mkdir -p Configuration/GenProduction/python/__sample_____timeStamp__
-cp /afs/cern.ch/user/g/gdecastr/GenStudies/inclusive_gridpack.py __sample___fragment___timeStamp__.py
+wget  __url__ -O __sample___fragment___timeStamp__.py --no-check-certificate
 mv __sample___fragment___timeStamp__.py Configuration/GenProduction/python/__sample_____timeStamp__
 
 scram b

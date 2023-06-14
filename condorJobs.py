@@ -4,11 +4,10 @@ import shutil
 import datetime
 import random
 
-randSeed = random.randint(0,50000)
-
 sample = str(sys.argv[1])
 nEvents = str(sys.argv[2])
 url = str(sys.argv[3])
+nJobs = int(sys.argv[4])
 
 originalDirectory = os.getcwd()
 os.mkdir(sample)
@@ -17,7 +16,8 @@ os.system('cp skeleton_condor.sh ' + sample)
 os.chdir(sample)
 workingDirectory = os.getcwd()
 
-for i in range(1):
+for i in range(nJobs):
+    randSeed = random.randint(0,100000)
     timeStamp = str(datetime.datetime.now().timestamp())
     os.chdir(workingDirectory) 
     os.mkdir(str(i))

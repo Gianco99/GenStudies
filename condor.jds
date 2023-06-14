@@ -6,5 +6,6 @@ when_to_transfer_output = on_exit
 output = [datasetname].stdout
 error = [datasetname].stderr
 log = [datasetname].stdlog
+x509userproxy = /afs/cern.ch/user/g/gdecastr/GenStudies/x509up_u149293
 +SingularityImage = "/cvmfs/singularity.opensciencegrid.org/cmssw/cms:rhel8-m-m20230425"
 queue

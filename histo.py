@@ -135,7 +135,7 @@ def main():
   h_GenIsolatedPhoton_eta = TH1F('GenIsolatedPhoton_eta', 'GenIsolatedPhoton_eta', 100, -5, 5)
   h_GenIsolatedPhoton_mass = TH1F('GenIsolatedPhoton_mass', 'GenIsolatedPhoton_mass', 100, 0, 100)
   h_GenIsolatedPhoton_phi = TH1F('GenIsolatedPhoton_phi', 'GenIsolatedPhoton_phi', 80, -4, 4)
-  h_GenIsolatedPhoton_pt = TH1F('GenIsolatedPhoton_pt', 'GenIsolatedPhoton_pt', 100, 0, 500)
+  h_GenIsolatedPhoton_pt = TH1F('GenIsolatedPhoton_pt', 'GenIsolatedPhoton_pt', 5000, 0, 5000)
 
   #add histos
   histo_array['h_weight']=h_weight
@@ -224,7 +224,7 @@ def main():
     GENDressLep = []
     HT_GEN = 0.
     treein.GetEntry(entry)
-    weight= ((treein.genWeight)/(abs(treein.genWeight)) + 1)/2
+    weight= (treein.genWeight)/(abs(treein.genWeight))
 
     #LHE info
     for iLHE in range(2,treein.nLHEPart):
